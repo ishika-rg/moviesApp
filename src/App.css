@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,21 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+.App{
+  background-color: #121212;
+  /* min-height: 100vh; */
+  padding-bottom: 100px;
+}
+
+::-webkit-scrollbar {
+  /* height: 4px;              height of horizontal scrollbar ← You're missing this */
+  width: 4px;               /* width of vertical scrollbar */
+  border: 1px solid #7a7575;
+}
+
+::-webkit-scrollbar-thumb{
+  background: #212121;
+  border-radius: 5px;
 }

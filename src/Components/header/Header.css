@@ -1,0 +1,39 @@
+.header{
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin : 0 2.5rem; */
+    padding: 0.1rem 2.5rem;
+    background-color: #212121;
+    color: white;
+}
+
+
+
+.header-left{
+    display : flex;
+    align-items: center;
+}
+.header-left a{
+    padding: 0 10px;
+    margin : 0 5px;
+    text-decoration: none;
+}
+.header-left span{
+    font-size : 1.2rem;
+    font-weight : bold;
+    cursor : pointer;
+    color : #ffffff;
+    padding: 5px;
+    border-radius: 4px;
+
+}
+span:hover{
+    background-color : #2b2a2ade;
+    
+}
+.logo{
+    max-height: 50px;
+    /* filter: saturate(500%) contrast(800%) brightness(500%) 
+      invert(100%) sepia(50%) hue-rotate(120deg);  */
+}

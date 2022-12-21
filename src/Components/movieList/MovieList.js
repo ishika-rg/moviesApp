@@ -2,24 +2,39 @@ import React, {useEffect, useState} from 'react'
 import './MovieList.css'
 import Card  from '../card/Card.js'
 import { useParams } from 'react-router-dom'
+import Bookmark from '../../pages/boookmarks/Bookmark'
 
 
 
-const MovieList = () => {
+const MovieList = (params) => {
+
+    const handleFavouriteClick = params.handleFavouriteClick
 
 
     const [movieList, setMovieList] = useState([])
     const {type} = useParams()
 
 
-    const [favourite, setFavourite] = useState([])
-    const handleFavouriteClick = (movie_ele) => {
+    // const [favourite, setFavourite] = useState([])
+    // const handleFavouriteClick = (ele) => {
 
-        const newFavourite = [...favourite, movie_ele]
-        setFavourite(newFavourite)
-        console.log("adding favourite item button")
-        console.log(favourite)
-    }
+    //     const exist = favourite.find((item)=> item.id === ele.id)
+    //     if (exist){
+    //         setFavourite(favourite.map((item) => item.id === ele.id ?
+    //         {...exist} : item ))
+    //     }else{
+    //         setFavourite([...favourite])
+    //     }
+    // }
+    // console.log(favourite)
+
+    // const handleFavouriteClick = (mov) => {
+
+    //     const newFav = [...favourite, mov]
+    //     setFavourite(newFav)
+
+    // }
+    // console.log(favourite)
 
 
     useEffect(() => {
@@ -61,6 +76,8 @@ const MovieList = () => {
             }
         </div>
     </div>
+
+    {/* <Bookmark favourite = {favourite} /> */}
     </>
   )
 }

@@ -11,24 +11,27 @@ const Card = (props) => {
     const movie = props.movie
     const handleFavouriteClick = props.handleFavouriteClick
 
-
-    const [fav, setFav] = useState([])
-    const add = (id) => {
-        // if (!fav.includes(id)) setFav(fav.concat(id));
-        // console.log(id);
-
-        const newFav = [...fav, id]
-        setFav(newFav)
-        console.log("adding favourite item button")
-        console.log(fav)
+    const [col, setColor] = useState('white')
 
 
+    // const [fav, setFav] = useState([])
+    // const add = (id) => {
 
 
-    }
+    //     const newFav = [...fav, id]
+    //     setFav(newFav)
+    //     console.log("adding favourite item button")
+    //     console.log(fav)
+
+
+
+
+    // }
+
+    // const add = (e) => {
+    //     setFav(pre => [...pre, e])
+    // }
     // console.log(fav)
-
-
     // {movie}
 
     const [loading, setLoading] = useState(true)
@@ -57,9 +60,14 @@ const Card = (props) => {
                 src = {movie.backdrop_path ? `https://image.tmdb.org/t/p/original${movie.backdrop_path}` : 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/IMDB_Logo_2016.svg/2560px-IMDB_Logo_2016.svg.png'} /> </div>
 
                 <div className = "fav_icon" 
-                // onClick={handleFavouriteClick}
-                onClick = {() => add(movie)}
-                ><i className="fa fa-heart" aria-hidden="true"></i></div>
+                onClick={() => handleFavouriteClick(movie)}
+                // onClick = {(movie) => add(movie)}
+                ><i className="fa fa-heart" aria-hidden="true" 
+                    onClick={() => {
+                        col === 'white' ? setColor('red') : setColor('white')
+                    }}
+                    style = {{color : col}}
+                ></i></div>
 
 
         <Link to = {`/movie/${movie.id}`}>

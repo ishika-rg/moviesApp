@@ -18,7 +18,9 @@ const Header = () => {
         </div>
 
         <div className='header-right' >
-            <h4>    Bookmarks </h4>
+            {/* <h4>    Bookmarks </h4> */}
+            <Link to  = '/bookmarks'> <span> Bookmarks </span> </Link>
+
         </div>
 
         

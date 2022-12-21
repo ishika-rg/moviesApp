@@ -19,7 +19,21 @@
     margin : 0 5px;
     text-decoration: none;
 }
-.header-left span{
+ .header-left span{
+    font-size : 1.2rem;
+    font-weight : bold;
+    cursor : pointer;
+    color : #ffffff;
+    padding: 5px;
+    border-radius: 4px;
+
+}
+.header-right a{
+    padding: 0 10px;
+    margin : 0 5px;
+    text-decoration: none;
+}
+ .header-right span{
     font-size : 1.2rem;
     font-weight : bold;
     cursor : pointer;

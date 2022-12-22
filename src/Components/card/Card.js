@@ -9,7 +9,7 @@ const Card = (props) => {
   const movie = props.movie;
   const handleFavouriteClick = props.handleFavouriteClick;
 
-  const [col, setColor] = useState("yellow");
+  const [col, setColor] = useState("white");
 
   const [loading, setLoading] = useState(true);
 

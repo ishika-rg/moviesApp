@@ -32,7 +32,7 @@ const Card = (props) => {
           <div className="card-img">
             {" "}
             <img
-              alt="card image"
+              alt="card"
               src={
                 movie.backdrop_path
                   ? `https://image.tmdb.org/t/p/original${movie.backdrop_path}`

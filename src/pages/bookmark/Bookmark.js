@@ -1,7 +1,7 @@
 import React from "react";
 import "./Bookmark.css";
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useLocation } from "react-router-dom";
 
 const Bookmark = ({ favourite }) => {
@@ -41,7 +41,7 @@ const Bookmark = ({ favourite }) => {
             <div className="card-img">
               {" "}
               <img
-                alt="card image"
+                alt="card"
                 src={
                   movie.backdrop_path
                     ? `https://image.tmdb.org/t/p/original${movie.backdrop_path}`

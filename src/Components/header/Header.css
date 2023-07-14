@@ -28,10 +28,15 @@
     border-radius: 4px;
 
 }
+
 .header-right a{
     padding: 0 10px;
     margin : 0 5px;
     text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
  .header-right span{
     font-size : 1.2rem;
@@ -40,6 +45,18 @@
     color : #ffffff;
     padding: 5px;
     border-radius: 4px;
+
+}
+ .count{
+    padding : 3px 5px;
+    color : black;
+    font-size : 1rem;
+    font-weight: bold;
+    background-color: #FFD700 ;
+    border-radius: 30px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+
 
 }
 span:hover{
@@ -73,6 +90,17 @@ span:hover{
     color: white;
     }
 
+    .res_count{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .res_count .count{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
 
 
 

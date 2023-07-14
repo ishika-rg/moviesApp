@@ -19,7 +19,7 @@ const Movie = () => {
       .then((data) => setMovieDetail(data));
   };
 
-  console.log(movieDetail);
+  // console.log(movieDetail);
 
   return (
     <>

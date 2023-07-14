@@ -18,15 +18,15 @@ const Home = (params) => {
       .then((data) => setPopularMovies(data.results));
   }, []);
 
-  console.log(popularMovies);
+  // console.log(popularMovies);
 
   return (
     <div>
       <div className="poster_main">
         <Carousel
           autoPlay={true}
-          showThumbs={true}
-          transitionTime={3}
+          showThumbs={false}
+          transitionTime={1}
           infiniteLoop={true}
           showStatus={true}
         >
@@ -35,11 +35,10 @@ const Home = (params) => {
               to={`/movie/${movie.id}`}
               style={{ textDecoration: "none", color: "white" }}
             >
-              <div className="movie" key={movie.id}>
+              <div className="movie" key={movie.original_title}>
                 <div className="movie-img">
-                  {" "}
                   <img
-                    alt="movie image"
+                    alt={movie.original_title}
                     src={
                       movie.backdrop_path
                         ? `https://image.tmdb.org/t/p/original${movie.backdrop_path}`

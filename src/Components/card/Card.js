@@ -28,6 +28,7 @@ const Card = (props) => {
           </SkeletonTheme>
         </div>
       ) : (
+
         <div className="card">
           <div className="card-img">
             {" "}

@@ -15,12 +15,17 @@ function App() {
     const newFav = [...favourite, mov];
     setFavourite(newFav);
   };
-  console.log(favourite);
+  // console.log(favourite);
+
+  const handleDelete = (id) => {
+    const afterDel = favourite.filter((ele) => ele.id !== id)
+    setFavourite(afterDel)
+  }
 
   return (
     <div className="App">
       <Router>
-        <Header />
+        <Header favourite = {favourite} />
 
         <Routes>
           <Route
@@ -34,7 +39,7 @@ function App() {
           ></Route>
           <Route path="/*" element={<h1> Oops! Page Not Found ! </h1>}></Route>
 
-          <Route path="bookmarks" element={<Bookmark favourite={favourite} />}>
+          <Route path="bookmarks" element={<Bookmark favourite={favourite} onDelete = {handleDelete} />}>
             {" "}
           </Route>
         </Routes>

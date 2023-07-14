@@ -4,8 +4,9 @@ import "./Header.css";
 
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ favourite }) => {
   const [toggle, setToggle] = useState(false);
+  // console.log("from header", favourite.length);
 
   const showMenu = () => {
     setToggle(!toggle);
@@ -41,7 +42,8 @@ const Header = () => {
           {/* <h4>    Bookmarks </h4> */}
           <Link to="/bookmarks">
             {" "}
-            <span> Bookmarks </span>{" "}
+            <span> Bookmarks</span>{" "}
+            <p className="count"> {favourite.length} </p>
           </Link>
         </div>
       </div>
@@ -50,7 +52,7 @@ const Header = () => {
         <Link to="/">
           <img
             className="logo"
-            alt ="header_pic"
+            alt="header_pic"
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/IMDB_Logo_2016.svg/2560px-IMDB_Logo_2016.svg.png"
           />
         </Link>
@@ -79,9 +81,10 @@ const Header = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/bookmarks">
+                  <Link to="/bookmarks" className="res_count">
                     {" "}
-                    <span> Bookmarks </span>{" "}
+                    <span> Bookmarks </span>
+                    <p className="count"> {favourite.length} </p>
                   </Link>
                 </li>
               </ul>

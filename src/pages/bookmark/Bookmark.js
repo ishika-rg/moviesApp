@@ -1,23 +1,22 @@
 import React from "react";
 import "./Bookmark.css";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 import { useLocation } from "react-router-dom";
 
-const Bookmark = ({ favourite }) => {
+const Bookmark = ({ favourite, onDelete}) => {
   const url = useLocation();
-  console.log(url.pathname);
+  // console.log(url.pathname);
+  // console.log(favourite.length);
 
-  console.log(favourite.length);
-
-  const [items, setItems] = useState(favourite);
-  console.log(items);
+  // const [items, setItems] = useState(favourite);
+  // console.log(items);
 
   const removeElement = (id) => {
-    const newItems = items.filter((ele) => ele.id !== id);
-    setItems(newItems);
+    // const newItems = items.filter((ele) => ele.id !== id);
+    // setItems(newItems);
+    onDelete(id)
   };
-
+  // console.log("after delelting", favourite.length, favourite)
   
 
   return (
@@ -27,7 +26,7 @@ const Bookmark = ({ favourite }) => {
         <h2>SAVED ITEMS </h2>
       </div>
       <div className="fav-list">
-        {items.length === 0 && (
+        {favourite.length === 0 && (
           <div className="list_empty">
             <h1> Your wishlist is currently empty !</h1>
             <Link to="/" className="back_btn">
@@ -36,8 +35,8 @@ const Bookmark = ({ favourite }) => {
           </div>
         )}
 
-        {items.map((movie) => (
-          <div className="card">
+        {favourite.map((movie) => (
+          <div className="card" key = {movie.id}>
             <div className="card-img">
               {" "}
               <img

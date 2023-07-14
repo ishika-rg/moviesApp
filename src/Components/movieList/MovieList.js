@@ -9,31 +9,6 @@ const MovieList = (params) => {
   const [movieList, setMovieList] = useState([]);
   const { type } = useParams();
 
-  // const [favourite, setFavourite] = useState([])
-  // const handleFavouriteClick = (ele) => {
-
-  //     const exist = favourite.find((item)=> item.id === ele.id)
-  //     if (exist){
-  //         setFavourite(favourite.map((item) => item.id === ele.id ?
-  //         {...exist} : item ))
-  //     }else{
-  //         setFavourite([...favourite])
-  //     }
-  // }
-  // console.log(favourite)
-
-  // const handleFavouriteClick = (mov) => {
-
-  //     const newFav = [...favourite, mov]
-  //     setFavourite(newFav)
-
-  // }
-  // console.log(favourite)
-
-  useEffect(() => {
-    getData();
-  }, []);
-
   useEffect(() => {
     getData();
   }, [type]);
@@ -70,7 +45,6 @@ const MovieList = (params) => {
           ))}
         </div>
       </div>
-
     </>
   );
 };

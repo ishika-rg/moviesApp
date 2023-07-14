@@ -173,8 +173,7 @@ h1 {
   }
 
   .right {
-    margin-left: 0;
-    margin-top: 0;
+    margin: 0 1.5rem;
     text-align: center;
   }
   .movie__name {
